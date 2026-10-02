@@ -291,7 +291,7 @@ Instant bans or aggressive setbacks inform cheat developers and players that the
 ## 💬 Support & Community
 
 * **Private Discord**: [Join our Discord](https://discord.gg/QeDcCFXDVa) *(Open a ticket for license verification)*
-* **Issue Tracker**: Submit bug reports and feature requests via the [GitHub Issues tab](../../issues).
+* **Issue Tracker**: Submit bug reports and feature requests open ticket on discord
 * **Enterprise Licensing**: Contact discord `[sales@yourdomain.com](https://discord.gg/QeDcCFXDVa)` for multi-network enterprise agreements.
 
 <div align="center">
