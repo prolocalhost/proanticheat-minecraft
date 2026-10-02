@@ -295,9 +295,9 @@ Bany i agresywne cofnięcia natychmiast uświadamiają cheatera, które ustawien
 
 ## 💬 Wsparcie i społeczność
 
-* **Prywatny Discord**: [Dołącz do naszego Discorda](https://discord.gg/twoj-link) *(Otwórz ticket w celu weryfikacji licencji)*
-* **Zgłaszanie błędów**: Błędy i propozycje funkcji można zgłaszać w zakładce [GitHub Issues](../../issues).
-* **Licencje komercyjne**: Kontakt pod adresem `kontakt@twojadomena.pl`.
+* **Prywatny Discord**: [Dołącz do naszego Discorda](https://discord.gg/QeDcCFXDVa) *(Otwórz ticket w celu weryfikacji licencji)*
+* **Zgłaszanie błędów**: Błędy i propozycje funkcji można zgłaszać na ticket discord.
+* **Licencje komercyjne**: Kontakt discord `https://discord.gg/QeDcCFXDVa`.
 
 <div align="center">
   <br>
