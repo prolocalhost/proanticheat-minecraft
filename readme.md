@@ -13,6 +13,11 @@
 <br>
 
 <p align="center">
+  <a href="readme.md">🇬🇧 Switch to English</a> •
+  <a href="readme_pl.md">🇵🇱 Wersja Polska</a>
+</p>
+
+<p align="center">
   <a href="#overview">Overview</a> •
   <a href="#core-architectural-pillars">Key Features</a> •
   <a href="#silent-combat-mitigation-shadow-nerf">Silent Mitigation</a> •
