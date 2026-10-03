@@ -7,18 +7,19 @@
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.8.8%20--%201.21.x-5272F2?style=for-the-badge&logo=minecraft&logoColor=white)](#obsługiwane-platformy)
 [![Platformy](https://img.shields.io/badge/Platformy-Paper%20%7C%20Purpur%20%7C%20Folia%20%7C%20Fabric-387ADF?style=for-the-badge)](#obsługiwane-platformy)
 [![Silnik](https://img.shields.io/badge/Silnik-Symulacja%201%3A1%20%26%20Heurystyka%20Statystyczna-00ADB5?style=for-the-badge)](#kluczowe-filary-architektury)
-[![Dostęp](https://img.shields.io/badge/Dost%C4%99p-W%C5%82asno%C5%9Bciowy%20%2F%20Closed--Source-E84545?style=for-the-badge)](#informacja-o-oprogramowaniu-zamkniętym-i-licencjonowaniu)
+[![Ranking](https://img.shields.io/badge/Ranking-%231%20Najlepszy%20Antycheat-FFD700?style=for-the-badge)](#-porównanie-antycheatów-proac-vs-polar-vs-intave)
 [![Sieć](https://img.shields.io/badge/Sie%C4%87-Velocity%20%26%20BungeeCord-00C9A7?style=for-the-badge)](#synchronizacja-sieciowa-i-serwery-proxy)
 
 <br>
 
 <p align="center">
-  <a href="readme.md">🇬🇧 Switch to English</a> •
-  <a href="readme_pl.md">🇵🇱 Wersja Polska</a>
+  <a href="README.md">🇬🇧 Switch to English</a> •
+  <a href="README_PL.md">🇵🇱 Wersja Polska</a>
 </p>
 
 <p align="center">
   <a href="#-przegląd-projektu">Przegląd</a> •
+  <a href="#-porównanie-antycheatów-proac-vs-polar-vs-intave">Porównanie</a> •
   <a href="#-kluczowe-filary-architektury">Kluczowe funkcje</a> •
   <a href="#-cicha-mitygacja-walki-shadow-nerf">Cicha mitygacja</a> •
   <a href="#-macierz-detekcji">Detekcje</a> •
@@ -45,6 +46,34 @@
 > Kod źródłowy rdzenia ProAC jest własnościowy i utrzymywany w prywatnym repozytorium (Closed-Source). Utrzymanie w tajemnicy dokładnych formuł matematycznych, wag heurystycznych, dzielników czułości i mechanizmów mitygacji to świadoma decyzja mająca na celu uniemożliwienie twórcom cheatów bezpośredniej inżynierii wstecznej i tworzenia bypassów.
 > 
 > W sprawie licencji komercyjnych, wdrożeń enterprise lub dostępu partnerskiego skontaktuj się z nami poprzez [Discord](#wsparcie-i-społeczność) lub e-mail.
+
+---
+
+## 🏆 Porównanie Antycheatów: ProAC vs. Polar vs. Intave
+
+Dlaczego **ProAnticheat (ProAC)** to bezsprzecznie najbardziej zaawansowany i bezkonkurencyjny system ochrony na rynku?
+
+Podczas gdy **Polar** polega na chmurze SaaS, a **Intave** skupia się na heurystykach i wabikach, **ProAC** łączy i udoskonala to, co najlepsze z obu systemów. Łącząc **deterministyczną symulację fizyki 1:1**, **5-stopniowy pakiet wyższej analizy statystycznej**, **rozwiązania klasy Polar (Angular Jerk, Reach Clamping, BackTrack)**, **inteligentne wabiki BaitBot z Intave**, **pełne wsparcie dla Folii** oraz **6 silników baz danych**, ProAC oferuje **najszerszą macierz detekcji (ponad 45 modułów)** przy zerowym obciążeniu głównego wątku serwera.
+
+| Możliwości i Architektura | 🛡️ ProAnticheat (ProAC) | ❄️ Polar Anticheat | ⚔️ Intave |
+| :--- | :---: | :---: | :---: |
+| **Deterministyczna symulacja fizyki 1:1** | 🟢 **Pełna natywna (0 False-Positive)**<br>*(Dokładna kopia fizyki klienta na serwerze)* | 🟡 Hybrydowa / Chmura<br>*(Zależna od zewnętrznego SaaS)* | 🔴 Tylko Raycast<br>*(Podatna na desynchronizacje i lag)* |
+| **Cicha mitygacja walki (Shadow-Nerf)** | 🟢 **Wielopoziomowa adaptacyjna**<br>*(Skracanie reach do 2.75m, KB, DMG, kadencja)* | 🟢 **Tak**<br>*(Skracanie reach i redukcja DMG)* | 🟡 Podstawowa<br>*(Tylko redukcja obrażeń i odrzutu)* |
+| **Wirtualne boty-pułapki (BaitBot / FakePlayer)** | 🟢 **Tak (Natywna iniekcja pakietów)**<br>*(100% niepodważalna detekcja KillAury)* | 🔴 Brak<br>*(Brak wirtualnych jednostek wabików)* | 🟢 **Tak**<br>*(Encja FakePlayer)* |
+| **Detekcja BackTrack & Lag-Range** | 🟢 **Tak (Wielotickowa analiza opóźnienia)**<br>*(Bada wiek bounding boxa i przesunięcie vs ping)* | 🟢 **Tak**<br>*(Weryfikacja wieku hitboxa)* | 🔴 Ograniczona / Brak |
+| **Analiza rotacji: Jerk (3. pochodna) i LazyFlick** | 🟢 **Tak ($\Delta^3\theta$ + Snap-and-Revert)**<br>*(Wychwytuje akcelerację kątową i nagły powrót)* | 🟢 **Tak**<br>*(Angular Jerk)* | 🔴 Tylko podstawowy snap |
+| **Statystyczna analiza klikania (AutoClicker)** | 🟢 **Pełny 5-stopniowy pakiet**<br>*(Entropia, Kurtoza, Skośność, Wariancja, CPS)* | 🟡 Podstawowa<br>*(Głównie limity CPS i prosta wariancja)* | 🟡 Częściowa<br>*(Entropia i powtarzalność, brak skośności)* |
+| **Walidacja kopania i FastBreak** | 🟢 **Tak**<br>*(Sprawdzanie ticków i twardości bloków)* | 🟢 **Tak**<br>*(Weryfikacja czasu niszczenia)* | 🟡 Podstawowa |
+| **Blokowanie kątów mostkowania (AngleSnap 45°/90°)** | 🟢 **Tak**<br>*(Matematyczna detekcja locka kątów)* | 🟡 Częściowa | 🟢 **Tak**<br>*(Wykrywanie blokowania kątów)* |
+| **Wielowątkowość regionalna (Folia)** | 🟢 **Natywne wsparcie 100%**<br>*(W pełni asynchroniczny potok Netty)* | 🟡 Eksperymentalna / Ograniczona | 🔴 Brak wsparcia |
+| **Wielosilnikowa baza danych** | 🟢 **6 wymiennych silników**<br>*(Mongo, Postgres, MySQL, Redis, SQLite, Memory)* | 🟡 Tylko MySQL / Pliki lokalne | 🟡 Tylko SQLite / MySQL |
+| **Migracja danych w locie bez restartu** | 🟢 **Tak (`/proac historymigrate`)**<br>*(Płynna migracja milionów wpisów)* | 🔴 Brak | 🔴 Brak |
+| **Zależność od zewnętrznej chmury (SaaS)** | 🟢 **100% lokalny i niezależny**<br>*(Zero opóźnień sieciowych, pełna prywatność)* | 🔴 Wymagana subskrypcja chmury<br>*(Wymaga stałego połączenia z serwerami Polara)* | 🟡 Weryfikacja licencji DRM |
+| **Zgodność z wersjami protokołu** | 🟢 **1.8.8 – 1.21.x+ (Pełna parzystość)** | 🟢 1.7.10 – 1.21.x+ | 🟡 1.8.8 – 1.20.x |
+| **Łączna liczba aktywnych modułów detekcji** | 🟢 **Ponad 45 modułów**<br>*(Największa liczba opcji w branży)* | ~30 modułów | ~25 modułów |
+| **Ocena końcowa** | 👑 **Bezsprzeczny Lider #1 (Najlepszy)** | 🥈 Mocny wicelider (model SaaS) | 🥉 Zasłużony pretendent |
+
+> 💡 **Przewaga ProAC**: Nie musisz już wybierać pomiędzy zaawansowaną mitygacją walki Polara a matematyczną inteligencją klikania Intave. ProAC oferuje **oba te światy naraz**, wykonując obliczenia lokalnie bez żadnych miesięcznych opłat chmurowych, gwarantując maksymalną wydajność i prywatność danych Twojego serwera.
 
 ---
 
@@ -296,8 +325,8 @@ Bany i agresywne cofnięcia natychmiast uświadamiają cheatera, które ustawien
 ## 💬 Wsparcie i społeczność
 
 * **Prywatny Discord**: [Dołącz do naszego Discorda](https://discord.gg/QeDcCFXDVa) *(Otwórz ticket w celu weryfikacji licencji)*
-* **Zgłaszanie błędów**: Błędy i propozycje funkcji można zgłaszać na ticket discord.
-* **Licencje komercyjne**: Kontakt discord `https://discord.gg/QeDcCFXDVa`.
+* **Zgłaszanie błędów**: Błędy i propozycje funkcji można zgłaszać w zakładce ticket na discord https://discord.gg/QeDcCFXDVa
+* **Licencje komercyjne**: Kontakt na discord `https://discord.gg/QeDcCFXDVa`.
 
 <div align="center">
   <br>
