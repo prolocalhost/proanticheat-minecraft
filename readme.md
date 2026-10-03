@@ -324,9 +324,9 @@ Instant bans or aggressive setbacks inform cheat developers and players that the
 
 ## 💬 Support & Community
 
-* **Private Discord**: [Join our Discord](https://discord.gg/your-invite) *(Open a ticket for license verification)*
-* **Issue Tracker**: Submit bug reports and feature requests via the [GitHub Issues tab](../../issues).
-* **Enterprise Licensing**: Contact `sales@yourdomain.com` for multi-network enterprise agreements.
+* **Private Discord**: [Join our Discord](https://discord.gg/QeDcCFXDVa) *(Open a ticket for license verification)*
+* **Issue Tracker**: Submit bug reports and feature requests via the discord https://discord.gg/QeDcCFXDVa
+* **Enterprise Licensing**: Contact on discord `https://discord.gg/QeDcCFXDVa` for multi-network enterprise agreements.
 
 <div align="center">
   <br>
