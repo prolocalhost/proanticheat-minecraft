@@ -13,8 +13,8 @@
 <br>
 
 <p align="center">
-  <a href="README.md">🇬🇧 Switch to English</a> •
-  <a href="README_PL.md">🇵🇱 Wersja Polska</a>
+  <a href="readme.md">🇬🇧 Switch to English</a> •
+  <a href="readme_pl.md">🇵🇱 Wersja Polska</a>
 </p>
 
 <p align="center">
